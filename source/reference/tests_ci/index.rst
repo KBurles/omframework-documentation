@@ -87,14 +87,15 @@ Arborescence
 
 [D] - tests
    [D] - resources
-      [D] - app
-         [F] - __init__.py
-         [F] - om_tests.py
-      [D] - core
-         [F] - __init__.py
-         [F] - om_tests.py
-      [F] - __init__.py
+   |   [D] - app
+   |   |  [F] - __init__.py
+   |   |  [F] - om_tests.py
+   |   [D] - core
+   |   |  [F] - __init__.py
+   |   |  [F] - om_tests.py
+   |   [F] - __init__.py
    [F] - om_tests
+
 
 Détail Arborescence
 -------------------
