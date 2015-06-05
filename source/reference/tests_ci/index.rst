@@ -85,22 +85,22 @@ Cette commande permet de :
 Arborescence
 ------------
 
-/tests
- /app
-  __init__.py
-  om_tests.py
- /core
-  __init__.py
-  om_tests.py
- /resources
-  __init__.py
- om_tests
+[D] - tests
+   [D] - resources
+      [D] - app
+         [F] - __init__.py
+         [F] - om_tests.py
+      [D] - core
+         [F] - __init__.py
+         [F] - om_tests.py
+      [F] - __init__.py
+   [F] - om_tests
 
 Détail Arborescence
 -------------------
 
  * __init__.py : obligatoires, ils permettent d'initialiser le répertoire courant comme module, Il doit être appelé à tous les niveaux du module, pour que la notion d'héritage soit fonctionnelle.
- * core/om_tests.py : code source de la commande générique om_tests, il gère aussi bien l'affichage, que la gestion des permissions, l'initialisation de la base de données. 
+ * core/om_tests.py : code source du script générique om_tests, il gère aussi bien l'affichage, que la gestion des permissions, l'initialisation de la base de données. 
  * app/om_tests.py : hérite du module core, cela permet de le surcharger pour l'application
  * om_tests : hérite du module app, c'est cette commande que l'on exécute.
 
