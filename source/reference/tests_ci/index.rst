@@ -72,7 +72,7 @@ Un script permet de dérouler cette routine de manière automatisée :
   ./om-tests -c initenv
 
 
-Ce script permet de :
+Cette commande permet de :
 
 * supprimer la base de données
 * créer la base de données
@@ -81,6 +81,28 @@ Ce script permet de :
 * donner les droits à apache pour les dossiers dans lequel il peut écrire
 * faire un lien symbolique vers le dossier de l'applicatif pour que les tests
   en question dans le dossier /var/www/
+
+Arborescence
+------------
+
+/tests
+ /app
+  __init__.py
+  om_tests.py
+ /core
+  __init__.py
+  om_tests.py
+ /resources
+  __init__.py
+ om_tests
+
+Détail Arborescence
+-------------------
+
+ * __init__.py : obligatoires, ils permettent d'initialiser le répertoire courant comme module, Il doit être appelé à tous les niveaux du module, pour que la notion d'héritage soit fonctionnelle.
+ * core/om_tests.py : code source de la commande générique om_tests, il gère aussi bien l'affichage, que la gestion des permissions, l'initialisation de la base de données. 
+ * app/om_tests.py : hérite du module core, cela permet de le surcharger pour l'application
+ * om_tests : hérite du module app, c'est cette commande que l'on exécute.
 
 
 Tous les tests
